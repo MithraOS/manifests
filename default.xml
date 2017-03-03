@@ -77,6 +77,7 @@
   <project name="DespairFactor/aarch64-linux-android-6.x" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-Despair-6.x" remote="bitbucket" revision="master" />
   <project name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-5.3-linaro.git" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-linaro-5.x" remote="linaro" revision="master" />
   <project name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-6.2-linaro.git" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-linaro-6.x" remote="linaro" revision="master" />
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9-kernel" name="aarch64-linux-android-4.9-kernel" remote="mithra" revision="master" />
 
   <!-- Toolchains Kernel -->
   <project name="VertexOS/aarch64-linux-android-5.x-kernel-linaro" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-linaro-5.x-kernel"  remote="bitbucket" revision="master" />
