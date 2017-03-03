@@ -13,16 +13,74 @@
            review="android-review.googlesource.com"
            revision="refs/tags/android-7.1.1_r21" />
 
+  <remote  name="mithra"
+           fetch="https://github.com/MithraROM"
+           sync-j="16" />
+
+  <remote  name="bitbucket"
+           fetch="https://bitbucket.org/" />
+
+  <remote  name="linaro"
+           fetch="https://android-git.linaro.org/git/" />
+
   <default revision="refs/heads/cm-14.1"
            remote="github"
            sync-c="true"
-           sync-j="4" />
+           sync-j="18" />
+
+  <!-- Mithra ROM Repo -->
+  <project path="build" name="android_build" groups="pdk" remote="mithra" revision="mithra-n" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+  <project path="external/busybox" name="android_external_busybox" remote="mithra" revision="mithra-n" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="mithra" revision="mithra-n-oms" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="mithra" revision="mithra-n-oms" />
+  <project path="packages/apps/masquerade" name="masquerade" remote="mithra" revision="n-rootless" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="mithra" revision="mithra-n-oms" />
+  <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="mithra" revision="mithra-n" />
+  <project path="system/core" name="android_system_core" remote="mithra" revision="mithra-n" />
+  <project path="vendor/cm" name="android_vendor_mithra" remote="mithra" revision="mithra-n" />
+  
+  <!-- Mithra OMS -->
+  <project path="packages/apps/Contacts" name="Matssa56/android_packages_apps_Contacts" remote="github" revision="cm-14.1-OMS" />
+  <project path="packages/apps/ContactsCommon" name="Matssa56/android_packages_apps_ContactsCommon" remote="github" revision="cm-14.1-OMS" />
+  <project path="packages/apps/Dialer" name="Matssa56/android_packages_apps_Dialer" remote="github" revision="cm-14.1-OMS" />
+  <project path="packages/apps/ExactCalculator" name="Matssa56/android_packages_apps_ExactCalculator" remote="github" revision="cm-14.1-OMS" />
+  <project path="packages/apps/PhoneCommon" name="Matssa56/android_packages_apps_PhoneCommon" remote="github" revision="cm-14.1-OMS" />
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="mithra" revision="mithra-n-oms" />
+
+  <!-- Mithra Devices -->
+  <project path="device/oneplus/oneplus3" name="android_device_oneplus_oneplus3" remote="mithra" revision="mithra-n" />
+
+  <!-- Mithra Kernel -->
+  <project path="kernel/oneplus/msm8996" name="android_kernel_oneplus_msm8996" remote="mithra" revision="mithra-n" />
+
+  <!-- Mithra Devices Common -->
+  <project path="device/oppo/common" name="android_device_oppo_common" remote="mithra" revision="mithra-n" />
+  <project path="device/qcom/common" name="android_device_qcom_common" remote="mithra" revision="mithra-n" />
+
+  <!-- Mithra Vendor -->
+  <project path="vendor/oneplus" name="TheMuppets/proprietary_vendor_oneplus" remote="github" revision="cm-14.1" />
+  <project path="vendor/oppo" name="TheMuppets/proprietary_vendor_oppo" remote="github" revision="cm-14.1" />
+  <project path="vendor/qcom/binaries" name="dianlujitao/proprietary_vendor_qcom_binaries" remote="github" revision="cm-14.1" />
+
+  <!-- Mithra NFC OpenSource -->
+  <project name="dianlujitao/android_vendor_nxp-nfc_opensource_Nfc" path="vendor/nxp-nfc/opensource/Nfc" remote="github" revision="cm-14.1" />
+  <project name="dianlujitao/android_vendor_nxp-nfc_opensource_frameworks" path="vendor/nxp-nfc/opensource/frameworks" remote="github" revision="cm-14.1" />
+  <project name="dianlujitao/android_vendor_nxp-nfc_opensource_libnfc-nci" path="vendor/nxp-nfc/opensource/libnfc-nci" remote="github" revision="cm-14.1" />
+
+  <!-- Toolchains AARCH64 -->
+  <project name="VertexOS/aarch64-linux-android-4.9" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-vertex-4.9" remote="bitbucket" revision="master" />
+  <project name="DespairFactor/aarch64-linux-android-6.x" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-Despair-6.x" remote="bitbucket" revision="master" />
+  <project name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-5.3-linaro.git" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-linaro-5.x" remote="linaro" revision="master" />
+  <project name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-6.2-linaro.git" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-linaro-6.x" remote="linaro" revision="master" />
+
+  <!-- Toolchains Kernel -->
+  <project name="VertexOS/aarch64-linux-android-5.x-kernel-linaro" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-linaro-5.x-kernel"  remote="bitbucket" revision="master" />
+  <project name="VertexOS/aarch64-linux-android-6.x-kernel-linaro" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-linaro-6.x-kernel" remote="bitbucket" revision="master" />
 
   <!-- AOSP Projects -->
 
-  <project path="build" name="LineageOS/android_build" groups="pdk,tradefed">
-    <copyfile src="core/root.mk" dest="Makefile" />
-  </project>
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" remote="aosp" />
   <project path="build/kati" name="LineageOS/android_build_kati" groups="pdk,tradefed" />
   <project path="build/soong" name="platform/build/soong" groups="pdk,tradefed" remote="aosp" >
@@ -301,7 +359,6 @@
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="frameworks/av" name="LineageOS/android_frameworks_av" groups="pdk" />
-  <project path="frameworks/base" name="LineageOS/android_frameworks_base" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" remote="aosp" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" remote="aosp" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" remote="aosp" />
@@ -309,7 +366,6 @@
   <project path="frameworks/minikin" name="platform/frameworks/minikin" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="frameworks/ml" name="platform/frameworks/ml" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="frameworks/multidex" name="platform/frameworks/multidex" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
-  <project path="frameworks/native" name="LineageOS/android_frameworks_native" groups="pdk" />
   <project path="frameworks/opt/bitmap" name="platform/frameworks/opt/bitmap" groups="pdk-fs" remote="aosp" />
   <project path="frameworks/opt/bluetooth" name="platform/frameworks/opt/bluetooth" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
@@ -379,13 +435,9 @@
   <project path="packages/apps/CarrierConfig" name="LineageOS/android_packages_apps_CarrierConfig" groups="pdk-fs" />
   <project path="packages/apps/CellBroadcastReceiver" name="LineageOS/android_packages_apps_CellBroadcastReceiver" groups="pdk-fs" />
   <project path="packages/apps/CertInstaller" name="LineageOS/android_packages_apps_CertInstaller" groups="pdk-cw-fs,pdk-fs" />
-  <project path="packages/apps/Contacts" name="LineageOS/android_packages_apps_Contacts" groups="pdk-fs" />
-  <project path="packages/apps/ContactsCommon" name="LineageOS/android_packages_apps_ContactsCommon" groups="pdk-fs" />
   <project path="packages/apps/DeskClock" name="LineageOS/android_packages_apps_DeskClock" groups="pdk-fs" />
-  <project path="packages/apps/Dialer" name="LineageOS/android_packages_apps_Dialer" groups="pdk-fs" />
   <project path="packages/apps/Email" name="LineageOS/android_packages_apps_Email" groups="pdk-fs" />
   <project path="packages/apps/EmergencyInfo" name="LineageOS/android_packages_apps_EmergencyInfo" />
-  <project path="packages/apps/ExactCalculator" name="LineageOS/android_packages_apps_ExactCalculator" groups="pdk-fs" />
   <project path="packages/apps/Gallery2" name="LineageOS/android_packages_apps_Gallery2" groups="pdk-fs" />
   <project path="packages/apps/HTMLViewer" name="LineageOS/android_packages_apps_HTMLViewer" groups="pdk-fs" />
   <project path="packages/apps/KeyChain" name="LineageOS/android_packages_apps_KeyChain" groups="pdk-fs" />
@@ -394,10 +446,8 @@
   <project path="packages/apps/Nfc" name="LineageOS/android_packages_apps_Nfc" groups="apps_nfc,pdk-fs" />
   <project path="packages/apps/OneTimeInitializer" name="platform/packages/apps/OneTimeInitializer" groups="pdk-fs" remote="aosp" />
   <project path="packages/apps/PackageInstaller" name="LineageOS/android_packages_apps_PackageInstaller" groups="pdk-fs" />
-  <project path="packages/apps/PhoneCommon" name="LineageOS/android_packages_apps_PhoneCommon" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/apps/Provision" name="platform/packages/apps/Provision" groups="pdk-fs" remote="aosp" />
   <project path="packages/apps/SafetyRegulatoryInfo" name="LineageOS/android_packages_apps_SafetyRegulatoryInfo" />
-  <project path="packages/apps/Settings" name="LineageOS/android_packages_apps_Settings" groups="pdk-fs" />
   <project path="packages/apps/Stk" name="LineageOS/android_packages_apps_Stk" groups="apps_stk,pdk-fs" />
   <project path="packages/apps/StorageManager" name="LineageOS/android_packages_apps_StorageManager" />
   <project path="packages/apps/Tag" name="LineageOS/android_packages_apps_Tag" groups="pdk-fs" />
@@ -444,7 +494,6 @@
   <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" name="LineageOS/android_prebuilts_gcc_darwin-x86_arm_arm-linux-androideabi-4.9" groups="pdk,darwin,arm" clone-depth="1" />
   <project path="prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" groups="pdk,darwin" clone-depth="1" remote="aosp" />
   <project path="prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" name="LineageOS/android_prebuilts_gcc_darwin-x86_x86_x86_64-linux-android-4.9" groups="pdk,darwin,x86" clone-depth="1" />
-  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" groups="pdk,linux,arm" clone-depth="1" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" groups="pdk,linux,arm" clone-depth="1" remote="aosp" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" groups="pdk,linux,arm" clone-depth="1" />
   <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" groups="pdk,linux" clone-depth="1" remote="aosp" />
@@ -473,7 +522,6 @@
   <project path="system/connectivity/apmanager" name="platform/system/connectivity/apmanager" remote="aosp" />
   <project path="system/connectivity/dhcp_client" name="platform/system/connectivity/dhcp_client" remote="aosp" />
   <project path="system/connectivity/shill" name="platform/system/connectivity/shill" remote="aosp" />
-  <project path="system/core" name="LineageOS/android_system_core" groups="pdk" />
   <project path="system/extras" name="LineageOS/android_system_extras" groups="pdk" />
   <project path="system/firewalld" name="platform/system/firewalld" remote="aosp" />
   <project path="system/gatekeeper" name="platform/system/gatekeeper" groups="pdk" remote="aosp" />
@@ -483,7 +531,6 @@
   <project path="system/netd" name="LineageOS/android_system_netd" groups="pdk" />
   <project path="system/nvram" name="platform/system/nvram" remote="aosp" />
   <project path="system/security" name="LineageOS/android_system_security" groups="pdk" />
-  <project path="system/sepolicy" name="LineageOS/android_system_sepolicy" groups="pdk" />
   <project path="system/tools/aidl" name="LineageOS/android_system_tools_aidl" groups="pdk-cw-fs,pdk-fs" />
   <project path="system/tpm" name="platform/system/tpm" remote="aosp" />
   <project path="system/update_engine" name="platform/system/update_engine" remote="aosp" />
