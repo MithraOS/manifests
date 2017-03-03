@@ -56,8 +56,8 @@
   <project path="kernel/oneplus/msm8996" name="android_kernel_oneplus_msm8996" remote="mithra" revision="mithra-n" />
 
   <!-- Mithra Devices Common -->
-  <project path="device/oppo/common" name="android_device_oppo_common" remote="mithra" revision="mithra-n" />
-  <project path="device/qcom/common" name="android_device_qcom_common" remote="mithra" revision="mithra-n" />
+  <project path="device/oppo/common" name="android_device_oppo_common" remote="mithra" revision="cm-14.1" />
+  <project path="device/qcom/common" name="android_device_qcom_common" remote="mithra" revision="cm-14.1" />
 
   <!-- Mithra Vendor -->
   <project path="vendor/oneplus" name="TheMuppets/proprietary_vendor_oneplus" remote="github" revision="cm-14.1" />
