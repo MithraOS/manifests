@@ -62,7 +62,6 @@
   <!-- Mithra Vendor -->
   <project path="vendor/oneplus" name="TheMuppets/proprietary_vendor_oneplus" remote="github" revision="cm-14.1" />
   <project path="vendor/oppo" name="TheMuppets/proprietary_vendor_oppo" remote="github" revision="cm-14.1" />
-  <project path="vendor/qcom/binaries" name="dianlujitao/proprietary_vendor_qcom_binaries" remote="github" revision="cm-14.1" />
 
   <!-- Mithra NFC OpenSource -->
   <project name="dianlujitao/android_vendor_nxp-nfc_opensource_Nfc" path="vendor/nxp-nfc/opensource/Nfc" remote="github" revision="cm-14.1" />
