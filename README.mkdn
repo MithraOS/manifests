@@ -21,7 +21,7 @@ Install repo
     chmod a+x ~/bin/repo
     
 
-Create hexa folder
+Create Mithra folder directory
 ----------------------
 
     mkdir ~/MithraROM
