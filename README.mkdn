@@ -1,50 +1,55 @@
-LineageOS
-===========
+Mithra ROM Manifest
+====================
 
-Submitting Patches
-------------------
-Patches are always welcome!  Please submit your patches via LineageOS Gerrit!
-You can do this by using these commands:
+Create dirs, and install soft, libs
+-----------------------------------
 
-    (From root android directory)
-    . build/envsetup.sh
-    (Go to repo you are patching, make your changes and commit)
-    cmgerrit <for(new)/changes(patch set)> <branch/change-id>
+    sudo su
+    add-apt-repository ppa:openjdk-r/ppa
+    apt-get update
+    apt-get install bison build-essential curl ccache flex lib32ncurses5-dev lib32z1-dev libesd0-dev libncurses5-dev libsdl1.2-dev libxml2 libxml2-utils lzop pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev git-core make phablet-tools gperf openjdk-8-jdk
+    exit
+    
+    
+Install repo
+------------
 
-    repo start cm-14.1 .
-    (Make your changes and commit)
-    repo upload .
-Note: "." meaning current directory
-For more help on using this tool, use this command: repo help upload
+    mkdir ~/bin
+    PATH=~/bin:$PATH
+    cd ~/bin
+    curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+    chmod a+x ~/bin/repo
+    
 
-Make your changes and commit with a detailed message, starting with what you are working with (i.e. vision: Update Kernel)
-Commit your patches in a single commit. Squash multiple commit using this command: git rebase -i HEAD~<# of commits>
+Create hexa folder
+----------------------
 
-To view the status of your and others' patches, visit [LineageOS Code Review](http://review.lineageos.org/)
+    mkdir ~/MithraROM
+    cd ~/MithraROM
+    
 
+GIT config (nickname, e-mail)
+-----------------------------
 
-Getting Started
----------------
+    git config --global user.email "mail@domain.com"
+    git config --global user.name "login"
+    
 
-To get started with Android/LineageOS, you'll need to get
-familiar with [Git and Repo](http://source.android.com/source/using-repo.html).
+To initialize your local repository use
+---------------------------------------
 
-To initialize your local repository using the LineageOS trees, use a command like this:
-
-    repo init -u git://github.com/LineageOS/android.git -b cm-14.1
+    repo init -u https://github.com/MithraROM/manifests.git -b "branch"
+    
 
 Then to sync up:
+----------------
 
-    repo sync
+    repo sync -j 16
 
-Please see the [LineageOS Wiki](http://wiki.lineageos.org/) for building instructions.
+Build command is
+----------------
 
-For more information on this Github Organization and how it is structured,
-please [read the wiki article](http://wiki.lineageos.org/w/Github_Organization)
-
-Buildbot
---------
-
-All supported devices are built nightly and periodically as changes are committed to ensure the source trees remain buildable.
-
-You can view the current build statuses at [LineageOS Jenkins](http://jenkins.lineageos.org/)
+    cd ~/Hexa
+    source build/envsetup.sh
+	breakfast
+	brunch *device*
