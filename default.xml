@@ -69,6 +69,9 @@
   <project name="dianlujitao/android_vendor_nxp-nfc_opensource_frameworks" path="vendor/nxp-nfc/opensource/frameworks" remote="github" revision="cm-14.1" />
   <project name="dianlujitao/android_vendor_nxp-nfc_opensource_libnfc-nci" path="vendor/nxp-nfc/opensource/libnfc-nci" remote="github" revision="cm-14.1" />
 
+  <!-- Mithra SnapDragon LLVM -->
+  <project path="prebuilts/snapdragon-llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_3.8/prebuilt/linux-x86_64" name="llvm-Snapdragon_LLVM_for_Android" remote="mithra" revision="3.8.8" />
+
   <!-- Toolchains AARCH64 -->
   <project name="VertexOS/aarch64-linux-android-4.9" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-vertex-4.9" remote="bitbucket" revision="master" />
   <project name="DespairFactor/aarch64-linux-android-6.x" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-Despair-6.x" remote="bitbucket" revision="master" />
