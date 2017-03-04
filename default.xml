@@ -32,7 +32,6 @@
   <project path="build" name="android_build" groups="pdk" remote="mithra" revision="mithra-n" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="external/busybox" name="android_external_busybox" remote="mithra" revision="mithra-n" />
   <project path="frameworks/base" name="android_frameworks_base" remote="mithra" revision="mithra-n-oms" />
   <project path="frameworks/native" name="android_frameworks_native" remote="mithra" revision="mithra-n-oms" />
   <project path="packages/apps/masquerade" name="masquerade" remote="mithra" revision="n-rootless" />
@@ -53,7 +52,7 @@
   <project path="device/oneplus/oneplus3" name="android_device_oneplus_oneplus3" remote="mithra" revision="mithra-n" />
 
   <!-- Mithra Kernel -->
-  <project path="kernel/oneplus/msm8996" name="android_kernel_oneplus_msm8996" remote="mithra" revision="mithra-n" />
+  <project path="kernel/oneplus/msm8996" name="RenderBroken/OP3-LOS-kernel" remote="github" revision="rk-los-n-hmp-master" />
 
   <!-- Mithra Devices Common -->
   <project path="device/oppo/common" name="android_device_oppo_common" remote="mithra" revision="cm-14.1" />
@@ -69,7 +68,7 @@
   <project name="dianlujitao/android_vendor_nxp-nfc_opensource_libnfc-nci" path="vendor/nxp-nfc/opensource/libnfc-nci" remote="github" revision="cm-14.1" />
 
   <!-- Mithra SnapDragon LLVM -->
-  <project path="prebuilts/snapdragon-llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_3.8/prebuilt/linux-x86_64" name="llvm-Snapdragon_LLVM_for_Android" remote="mithra" revision="3.8.8" />
+  <project path="prebuilts/clang/linux-x86/host/sdclang-3.8" name="llvm-Snapdragon_LLVM_for_Android" remote="mithra" revision="3.8.8" />
 
   <!-- Toolchains AARCH64 -->
   <project name="VertexOS/aarch64-linux-android-4.9" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-vertex-4.9" remote="bitbucket" revision="master" />
