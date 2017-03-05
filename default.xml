@@ -36,13 +36,13 @@
   <project path="external/skia" name="android_external_skia" remote="mithra" revision="mithra-n" />
   <project path="external/sqlite" name="android_external_sqlite" remote="mithra" revision="mithra-n" />
   <project path="external/zlib" name="android_external_zlib" remote="mithra" revision="mithra-n" />
-  <project path="frameworks/av" name="android_frameworks_av" remote="mithra" revision="mithra-n" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="mithra" revision="mithra-n-oms" />
-  <project path="frameworks/native" name="android_frameworks_native" remote="mithra" revision="mithra-n-oms" />
+  <project path="frameworks/av" name="android_frameworks_av" remote="mithra" revision="mithra-n-eas" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="mithra" revision="mithra-n-eas" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="mithra" revision="mithra-n-eas" />
   <project path="packages/apps/masquerade" name="masquerade" remote="mithra" revision="n-rootless" />
   <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="mithra" revision="mithra-n-oms" />
   <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="mithra" revision="mithra-n" />
-  <project path="system/core" name="android_system_core" remote="mithra" revision="mithra-n" />
+  <project path="system/core" name="android_system_core" remote="mithra" revision="mithra-n-eas" />
   <project path="vendor/cm" name="android_vendor_mithra" remote="mithra" revision="mithra-n" />
   
   <!-- Mithra OMS -->
@@ -58,10 +58,10 @@
   <project path="external/libpng" name="AOSPA/android_external_libpng" remote="github" revision="nougat-mr1" />
 
   <!-- Mithra Devices -->
-  <project path="device/oneplus/oneplus3" name="android_device_oneplus_oneplus3" remote="mithra" revision="mithra-n" />
+  <project path="device/oneplus/oneplus3" name="android_device_oneplus_oneplus3" remote="mithra" revision="mithra-n-eas" />
 
   <!-- Mithra Kernel -->
-  <project path="kernel/oneplus/msm8996" name="RenderBroken/OP3-LOS-kernel" remote="github" revision="rk-los-n-hmp-master" />
+  <project path="kernel/oneplus/msm8996" name="RenderBroken/OP3-LOS-kernel" remote="github" revision="rk-los-n-eas-master" />
 
   <!-- Mithra Devices Common -->
   <project path="device/oppo/common" name="android_device_oppo_common" remote="mithra" revision="cm-14.1" />
