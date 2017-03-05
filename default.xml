@@ -39,7 +39,6 @@
   <project path="frameworks/av" name="android_frameworks_av" remote="mithra" revision="mithra-n" />
   <project path="frameworks/base" name="android_frameworks_base" remote="mithra" revision="mithra-n-oms" />
   <project path="frameworks/native" name="android_frameworks_native" remote="mithra" revision="mithra-n-oms" />
-  <project path="packages/apps/masquerade" name="masquerade" remote="mithra" revision="n" />
   <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="mithra" revision="mithra-n-oms" />
   <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="mithra" revision="mithra-n" />
   <project path="system/core" name="android_system_core" remote="mithra" revision="mithra-n" />
@@ -52,6 +51,9 @@
   <project path="packages/apps/ExactCalculator" name="Matssa56/android_packages_apps_ExactCalculator" remote="github" revision="cm-14.1-OMS" />
   <project path="packages/apps/PhoneCommon" name="Matssa56/android_packages_apps_PhoneCommon" remote="github" revision="cm-14.1-OMS" />
   <project path="system/sepolicy" name="android_system_sepolicy" remote="mithra" revision="mithra-n-oms" />
+
+  <!-- Mithra Masquerade -->
+  <project path="packages/apps/masquerade" name="masquerade" remote="mithra" revision="n" />
 
   <!-- AOSPA Repos -->
   <project path="external/libjpeg-turbo" name="AOSPA/android_external_libjpeg-turbo" remote="github" revision="nougat-mr1" />
