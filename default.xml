@@ -14,8 +14,8 @@
            revision="refs/tags/android-7.1.1_r21" />
 
   <remote  name="mithra"
-           fetch="https://github.com/MithraROM"
-           sync-j="16" />
+           fetch="https://github.com/MithraOS"
+           sync-j="18" />
 
   <remote  name="bitbucket"
            fetch="https://bitbucket.org/" />
