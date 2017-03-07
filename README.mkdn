@@ -1,4 +1,4 @@
-Mithra ROM Manifest
+MithraOS Manifest
 ====================
 
 Create dirs, and install soft, libs
@@ -24,8 +24,8 @@ Install repo
 Create Mithra folder directory
 ----------------------
 
-    mkdir ~/MithraROM
-    cd ~/MithraROM
+    mkdir ~/MithraOS
+    cd ~/MithraOS
     
 
 GIT config (nickname, e-mail)
@@ -38,7 +38,7 @@ GIT config (nickname, e-mail)
 To initialize your local repository use
 ---------------------------------------
 
-    repo init -u https://github.com/MithraROM/manifests.git -b "branch"
+    repo init -u https://github.com/MithraOS/manifests.git -b "branch"
     
 
 Then to sync up:
@@ -49,7 +49,7 @@ Then to sync up:
 Build command is
 ----------------
 
-    cd ~/Hexa
+    cd ~/MIthraOS
     source build/envsetup.sh
 	breakfast
 	brunch *device*
