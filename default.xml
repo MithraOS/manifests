@@ -41,7 +41,7 @@
   <project path="frameworks/native" name="android_frameworks_native" remote="mithra" revision="mithra-n-oms-rootless" />
   <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="mithra" revision="mithra-n-oms-rootless" />
   <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="mithra" revision="mithra-n" />
-  <project path="system/core" name="android_system_core" remote="mithra" revision="mithra-n" />
+  <project path="system/core" name="android_system_core" remote="mithra" revision="mithra-n-oms-rootless" />
   <project path="vendor/cm" name="android_vendor_mithra" remote="mithra" revision="mithra-n" />
   
   <!-- Mithra OMS -->
