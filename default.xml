@@ -91,6 +91,7 @@
   <!-- Toolchains Kernel -->
   <project name="VertexOS/aarch64-linux-android-5.x-kernel-linaro" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-linaro-5.x-kernel"  remote="bitbucket" revision="master" />
   <project name="VertexOS/aarch64-linux-android-6.x-kernel-linaro" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-linaro-6.x-kernel" remote="bitbucket" revision="master" />
+  <project name="VertexOS/aarch64-linux-gnu-kernel-linaro" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-linaro-6.3.1-kernel" remote="github" revision="6.3.1" />
 
   <!-- AOSP Projects -->
 
