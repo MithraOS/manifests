@@ -1,4 +1,4 @@
-MithraOS Manifest
+MithraOS Manifest v2.0
 ====================
 
 Create dirs, and install soft, libs
@@ -38,18 +38,37 @@ GIT config (nickname, e-mail)
 To initialize your local repository use
 ---------------------------------------
 
-    repo init -u https://github.com/MithraOS/manifests.git -b "branch"
+    repo init -u https://github.com/MithraOS/manifests.git -b mithra-n
     
 
 Then to sync up:
 ----------------
 
-    repo sync -j 16
+    repo sync -j 18 -f --force-sync (Due to EOS error on AOSP & LineageOS)
+
+
+Prebuilt session:
+-----------------
+
+	export JACK_SERVER_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4g"
+	prebuilts/misc/linux-x86/ccache/ccache -M 100G
+	export USE_CCACHE=1
+	Create a file without an extension call killjack & copy paste the commands below
+	
+	#!/bin/bash 
+	export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4g" 
+	./prebuilts/sdk/tools/jack-admin kill-server 
+	./prebuilts/sdk/tools/jack-admin start-server
+	
+	Save it & copy the killjack files to your ROM directory
+	sudo chmod 755 killjack
+	./killjack
+	
 
 Build command is
 ----------------
 
-    cd ~/MIthraOS
+    cd ~/MithraOS
     source build/envsetup.sh
 	breakfast
 	brunch *device*
